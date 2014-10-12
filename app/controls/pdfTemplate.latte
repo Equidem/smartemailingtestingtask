@@ -1,0 +1,46 @@
+{block content}
+<div id="pageContent">
+    <h1>Export statistiky kampaně {$name}</h1>
+    <img src="images/{$image}" style="float:right;"/>
+    <br>
+    <u>Základní informace</u>
+    <br>
+    <p>
+        Odesláno emailů: {$sent}<br>
+        Datum rozesílky: {$start|date:'j.n.Y'}<br>
+        Název kampaně: {$name}<br>
+        Předmět kampaně:<br>
+        Odesílatel:<br>
+        Adresa pro odpovědi:<br>
+        Odesláno na seznamy:<br>
+        Vyloučené seznamy z rozesílky:<br>
+    </p>
+    <br>
+    
+    <u>Přehled otevřených</u>
+    <br>
+    <p>
+        Počet unikátních otevření: {$unique_opened_perc}%<br>
+        Počet celkových otevření: {$opened}<br>
+    </p>
+    <br>
+    <u>Přehled o klikání</u>
+    <br>
+    <p>
+        Celkem kliknuto: {$clicked}<br>
+        Click rate: {$clicked_perc_abs}<br>
+        Kliklo a otevřelo: <br>
+    </p>
+    <br>
+    <u>Přehled odhlášených</u>
+    <br>
+    <p>
+        Počet odhlášených: {$unsubscribed_perc_abs}%<br>
+        Počet odhlášených v % oproti opens: {$unsubscribed_perc}%<br>
+    </p>
+    <br>
+    <u>Přehled o vrácených</u>
+    <br>
+    Počet vrácených: {$returned_perc}%
+</div>
+{/block}
